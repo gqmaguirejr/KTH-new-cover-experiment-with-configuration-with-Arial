@@ -1,14 +1,20 @@
-\selectlanguage{latvian}
-\setlocalecaption{latvian}{abstract}{Anotācija}
+\babelpolyLangStart{latvian}
+%\selectlanguage{latvian}
+%\setlocalecaption{latvian}{abstract}{Anotācija}
 \begin{abstract}
     \markboth{\abstractname}{}
-\begin{ThesisAbstract}{lav}
-Kopsavilkums latviešu valodā.
-\end{ThesisAbstract}
+\begin{scontents}[store-env=lang]
+lav
+\end{scontents}
+%\begin{scontents}[store-env=abstracts,print-env=true]
+\begin{scontents}[store-env=abstracts,print-env=true]
+{Kopsavilkums latviešu valodā.}
+\end{scontents}
 
 \keywordHeading{Atslēgas vārdi}
-\begin{ThesisKeywords}{lav}
-5–6 atslēgvārdi
-\end{ThesisKeywords}
+\begin{scontents}[store-env=keywords,print-env=true]
+{5–6 atslēgvārdi}
+\end{scontents}
 \end{abstract}
 \cleardoublepage
+\babelpolyLangStop{latvian}

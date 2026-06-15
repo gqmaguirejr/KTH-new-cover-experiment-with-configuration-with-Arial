@@ -1,14 +1,19 @@
-\selectlanguage{latin}
-\setlocalecaption{latin}{abstract}{Summarium}
+\babelpolyLangStart{latin}
+%\selectlanguage{latin}
+%\setlocalecaption{latin}{abstract}{Summarium}
 \begin{abstract}
     \markboth{\abstractname}{}
-\begin{ThesisAbstract}{lat}
+\begin{scontents}[store-env=lang]
+lat
+\end{scontents}
+\begin{scontents}[store-env=abstracts,print-env=true]
 Summarium Latine scriptum.
-\end{ThesisAbstract}
+\end{scontents}
 
 \keywordHeading{Verba Clavis}
-\begin{ThesisKeywords}{lat}
+\begin{scontents}[store-env=keywords,print-env=true]
 Quinque vel sex verba clavis
-\end{ThesisKeywords}
+\end{scontents}
 \end{abstract}
 \cleardoublepage
+\babelpolyLangStop{latin}

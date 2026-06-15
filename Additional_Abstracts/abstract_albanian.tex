@@ -1,14 +1,19 @@
-\selectlanguage{albanian}
-\setlocalecaption{albanian}{abstract}{Përmbledhja}
+\babelpolyLangStart{albanian}
+%\selectlanguage{albanian}
+%\setlocalecaption{albanian}{abstract}{Përmbledhja}
 \begin{abstract}
     \markboth{\abstractname}{}
-\begin{ThesisAbstract}{alb}
+\begin{scontents}[store-env=lang]
+alb
+\end{scontents}
+\begin{scontents}[store-env=abstracts,print-env=true]
 Përmbledhje në shqip.
-\end{ThesisAbstract}
+\end{scontents}
 
 \keywordHeading{Fjalë kyçe}
-\begin{ThesisKeywords}{alb}
+\begin{scontents}[store-env=keywords,print-env=true]
 5-6 fjalë kyçe
-\end{ThesisKeywords}
+\end{scontents}
 \end{abstract}
 \cleardoublepage
+\babelpolyLangStop{albanian}

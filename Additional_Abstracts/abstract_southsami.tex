@@ -9,17 +9,23 @@
 %\newcommand{\ix}{\"i}
 % --- South Sami Abstract ---
 % Set the caption for 'abstract' to the South Sami translation
-\setlocalecaption{swedish}{abstract}{Åssjalommes}
+%\setlocalecaption{swedish}{abstract}{Åssjalommes}
+% Overwrite the string BEFORE the abstract environment initializes its text headers
+\renewcommand{\abstractname}{Åssjalommes}
 \begin{abstract}
     \markboth{\abstractname}{}
-\begin{ThesisAbstract}{sma} % Using the ISO 639-3 code for South Sami
+ % Using the ISO 639-3 code for South Sami
+\begin{scontents}[store-env=lang]
+sma
+\end{scontents}
+\begin{scontents}[store-env=abstracts,print-env=true]
 Åssjalommes saemien gïelesne.
-\end{ThesisAbstract}
+\end{scontents}
 
 % Set the caption for 'keywords'
 \keywordHeading{Ohtsemebaakoeh}
-\begin{ThesisKeywords}{sma}
+\begin{scontents}[store-env=keywords,print-env=true]
 vijhte-govhte ohtsemebaakoeh
-\end{ThesisKeywords}
+\end{scontents}
 \end{abstract}
 \cleardoublepage

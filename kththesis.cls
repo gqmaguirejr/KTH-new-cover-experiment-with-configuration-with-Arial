@@ -51,6 +51,14 @@
 \input{./kth/kth-packages}
 
 \ifxeorlua
+  % Set up babel for the main and secondary languages.
+  % Babel will automatically add additional languages as they are used.
+  %\ifinswedish
+  %  \usepackage[english, main=swedish, provide+=*]{babel}
+  % \else
+  %  \usepackage[swedish, main=english, provide+=*]{babel}
+  % \fi
+
   \RequirePackage{polyglossia}
   \ifinswedish
     \setmainlanguage{swedish}
@@ -63,7 +71,9 @@
     \setotherlanguage[numerals=arabic, forceheadingpunctuation=false]{russian}
     \setotherlanguage[variant=simplified]{chinese} % numerals=arabic
 
-    \setotherlanguages{italian,norsk,german,danish,dutch,estonian, finnish}
+    \setotherlanguages{italian,norsk,german,danish,dutch,estonian, finnish,albanian,hungarian,icelandic,latin,latvian,%northernsami,
+    japanese,romanian,turkish,vietnamese,%catalan,
+    polish,ukrainian,slovak,serbian,bosnian}
 
   \else
     \setmainlanguage[variant=us]{english}
@@ -77,18 +87,22 @@
     \setotherlanguage[variant=simplified]{chinese} % numerals=arabic
     
     %\setotherlanguages{swedish,italian,danish,dutch,estonian}
-    \setotherlanguages{swedish,italian,danish,dutch,estonian, finnish}
+    \setotherlanguages{swedish,italian,danish,dutch,estonian, finnish,albanian,hungarian,icelandic,latin,latvian,%northernsami,
+    japanese,romanian,turkish,vietnamese,%catalan,
+    polish,ukrainian,slovak,serbian,bosnian}
     %\setotherlanguage{swedish}
   \fi
+
 \else
   \RequirePackage[utf8]{inputenc}
+  % Set up babel for the main and secondary languages.
+  % Babel will automatically add additional languages as they are used.
   \ifinswedish
-    % can replace USenglish with UKenglish if desired
-    \RequirePackage[main=swedish,english,french,spanish,italian,norsk,ngerman,danish,dutch,estonian]{babel}
-  \else
-    % can replace USenglish with UKenglish if desired
-    \RequirePackage[main=english,swedish,french,spanish,italian,norsk,ngerman,danish,dutch,estonian]{babel}
-  \fi
+    \usepackage[english, main=swedish, provide+=*]{babel}
+   \else
+    \usepackage[swedish, main=english, provide+=*]{babel}
+   \fi
+
 \fi
 
 \iftoggle{gfivepaper}{

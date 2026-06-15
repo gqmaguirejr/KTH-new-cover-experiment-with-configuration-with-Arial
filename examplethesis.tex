@@ -65,7 +65,7 @@ english,                 % the language of the body of the document: english or 
 bibtex,                  % the bibliographic processor to use: biblatex or bibtex
 %nomenclature,           % add the option nomenclature
 %digitaloutput,          % optimize for digital output (this changes the color palette)
-%includeExtraAbstracts, % uncomment to allow abstracts in languages beyond English & Swedish
+includeExtraAbstracts, % uncomment to allow abstracts in languages beyond English & Swedish
 ]{kththesis}
 
 % if pdflatex \usepackage[utf8]{inputenc}
@@ -191,7 +191,7 @@ morekeywords={begin, todo, textbf, textit, texttt}
 % note that nomain - does not produce a main glossary, thus only acronyms will be in the glossary
 % note that nopostdot - will prevent there being a period at the end of each entry
 \usepackage[acronym, style=super, section=section, nonumberlist, nomain,
-nopostdot]{glossaries}
+nopostdot,noredefwarn]{glossaries}
 \setlength{\glsdescwidth}{0.75\textwidth}
 \usepackage[]{glossaries-extra}
 \ifinswedish
@@ -544,6 +544,7 @@ or Swedish abstract and English summary need not be literal translations of each
 %\input{Additional_Abstracts/abstract_norweign}
 
 % --- Include Catalan abstract ---
+% enable catalan in kththesis.cls
 %\input{Additional_Abstracts/abstract_catalan}
 
 % --- Include Finnish abstract ---
@@ -562,7 +563,7 @@ or Swedish abstract and English summary need not be literal translations of each
 %\input{Additional_Abstracts/abstract_russian}
 
 % --- Include Polish abstract ---
-%\input{Additional_Abstracts/abstract_polishn}
+%\input{Additional_Abstracts/abstract_polish}
 
 % --- Include Ukrainian abstract ---
 %\input{Additional_Abstracts/abstract_ukrainian}
@@ -588,7 +589,7 @@ or Swedish abstract and English summary need not be literal translations of each
 % --- Include Albanian abstract ---
 %\input{Additional_Abstracts/abstract_albanian}
 
-% --- Include Greek abstract ---
+% --- Include Greek abstract --- NOT WORKING!
 %\input{Additional_Abstracts/abstract_greek}
 
 % --- Include Hungarian abstract ---
@@ -610,6 +611,7 @@ or Swedish abstract and English summary need not be literal translations of each
 %\input{Additional_Abstracts/abstract_meänkieli}
 
 % --- Include Northernsami abstract ---
+% enable northernsami in kththesis.cls
 %\input{Additional_Abstracts/abstract_northernsami}
 
 % --- Include Romanian abstract ---
@@ -624,16 +626,18 @@ or Swedish abstract and English summary need not be literal translations of each
 % --- Include Vietnamese abstract ---
 %\input{Additional_Abstracts/abstract_vietnamese}
 
-% --- Include Yiddish abstract ---
+% For the following languages, you have to enable the language in kththesis.cls
+% While some of the functionality works if you enable the fonts in kth-fonts.tex the use of right-to-left characters and bidi will break the output of the DiVA metadata -- fixing this requires changing to LuaLaTex and writing Lua code as done in the third-cycle template
+% --- Include Yiddish abstract --- NOT WORKING!
 %\input{Additional_Abstracts/abstract_yiddish}
 
-% --- Include Hebrew abstract ---
+% --- Include Hebrew abstract --- NOT WORKING!
 %\input{Additional_Abstracts/abstract_hebrew}
 
-% --- Include Arabic abstract ---
+% --- Include Arabic abstract --- NOT WORKING!
 %\input{Additional_Abstracts/abstract_arabic}
 
-% --- Include Centralkurdish abstract ---
+% --- Include Centralkurdish abstract --- NOT WORKING!
 %\input{Additional_Abstracts/abstract_centralkurdish}
 
 %% add additional languages as needed

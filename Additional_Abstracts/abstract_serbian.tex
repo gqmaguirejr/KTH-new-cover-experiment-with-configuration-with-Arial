@@ -1,14 +1,19 @@
-\selectlanguage{serbian}
-\setlocalecaption{serbian}{abstract}{Sažetak}
+\babelpolyLangStart{serbian}
+%\selectlanguage{serbian}
+%\setlocalecaption{serbian}{abstract}{Sažetak}
 \begin{abstract}
     \markboth{\abstractname}{}
-\begin{ThesisAbstract}{srp}
+\begin{scontents}[store-env=lang]
+srp
+\end{scontents}
+\begin{scontents}[store-env=abstracts,print-env=true]
 Sažetak na srpskom.
-\end{ThesisAbstract}
+\end{scontents}
 
 \keywordHeading{Ključne reči}
-\begin{ThesisKeywords}{srp}
+\begin{scontents}[store-env=keywords,print-env=true]
 5-6 ključnih reči
-\end{ThesisKeywords}
+\end{scontents}
 \end{abstract}
 \cleardoublepage
+\babelpolyLangStop{serbian}
